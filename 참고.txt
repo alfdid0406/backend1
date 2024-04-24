@@ -1,0 +1,30 @@
+1. cmd 실행 > py(python) venv -m (가상환경 폴더이름) #cmd 경로 확인하고 입력
+2. 가상환경 폴더 VSCode로 실행
+3. 터미널 경로 확인후 ./Scripts/activate 입력 (Tab키 자동완성)
+4. 터미널에 pip install flask 설치
+5. 터미널에 pip install env 설치
+6. 작업할 폴더에 app.py 생성
+7. 가상환경 폴더에 (app.py위치 or 폴더 최상단)
+	.env 파일 생성
+8. .env 파일에 
+	FLASK_APP= (필수, 실행할 파일)
+	FLASK_ENV= (선택, 현 버전과 호환 x, development)
+
+#endpoint, methods(get,post 등) 지정해주기
+#Rule에 변수지정 51p
+#if문, for문  54p
+#static, templates 폴더 생성 각 폴더에 style.css / index.html
+
+
+"""Flask에서 대소문자를 구별해야 하는 중요한 명령어는 다음과 같습니다:
+
+1. **HTTP 메소드(Methods)**
+   - 라우트(route)를 정의할 때, 허용되는 HTTP 메소드를 지정할 때 대문자로 작성해야 합니다. 예를 들어, `@app.route("/example", methods=["GET", "POST"])`에서 "GET"과 "POST"는 대문자로 써야 합니다.
+
+2. **Flask 클래스와 메소드**
+   - Flask 클래스와 해당 메소드는 대소문자를 구분합니다. 예를 들어, Flask 클래스는 대문자 "Flask"로 시작해야 하며, `Flask.route()`와 같은 메소드도 대문자로 시작해야 합니다.
+
+3. **플라스크 어플리케이션 객체**
+   - Flask 어플리케이션 객체를 생성할 때 클래스 이름과 메소드 이름은 모두 대문자로 시작해야 합니다. 예를 들어, `app = Flask(__name__)`에서 "Flask"는 대문자로 시작합니다.
+
+이러한 명령어들은 대소문자를 엄격히 구분하기 때문에 주의해서 사용해야 합니다."""
