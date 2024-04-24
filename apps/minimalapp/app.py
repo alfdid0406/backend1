@@ -107,23 +107,22 @@ def contact_complete():
       return redirect(url_for('contact'))
     
 
-
+# 이메일 보내기 함수
     send_email(
-      email,
-      '문의 감사합니다',
-      'contact_mail',
-      username=username,
-      description=description
+      email, # 이메일 주소
+      '문의 감사합니다', # 이메일 답장의 제목
+      'contact_mail', # 이메일 내용의 템플릿
+      username=username, # 사용자 이름
+      description=description # 문의 내용
     )
 
     flash('문의해 주셔서 감사합니다.')
 
     return redirect(url_for('contact_complete'))
 
-
-
   return render_template('contact_complete.html')
 
+# 이메일 보내기 위해서 API 사용하는 함수
 def send_email(to, subject, template, **kwargs):
   #메일을 송신하는 함수
   msg = Message(subject, recipients=[to])
